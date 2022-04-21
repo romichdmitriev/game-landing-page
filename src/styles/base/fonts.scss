@@ -1,7 +1,34 @@
 @font-face {
-  font-family: 'MuseoSans';
+  font-family: 'Bebas Neue Bold';
   font-style: normal;
-  font-weight: normal;
-  src: url('../assets/fonts/museosans-00A1-017F_0307-300.woff') format('woff');
+  font-weight: 700;
+  src: url('../assets/fonts/Bebas_Neue_Bold.ttf') format('ttf');
   unicode-range: U+0020-007F;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Open+Sans:wght@400;600;700&display=swap');
+
+/* --- Typography classes --- */
+.typography-h1 {
+  font: 700 80px 'Bebas Neue Bold', sans-serif;
+}
+
+.typography-h2 {
+  font: 700 36px 'Bebas Neue Bold', sans-serif;
+}
+
+.typography-h3 {
+  font: 700 24px 'Bebas Neue Bold';
+}
+
+.typography-primary {
+  font: 400 18px $fontFamily;
+}
+
+.typography-button {
+  font: 700 16px $fontFamily;
+}
+
+.typography-navigation {
+  font: 700 12px $fontFamily;
 }
