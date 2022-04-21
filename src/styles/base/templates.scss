@@ -1,0 +1,71 @@
+// Адаптивное видео
+%responsiveVideo {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+
+  video,
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Видео в качестве фона
+%videoBackground {
+  video,
+  iframe,
+  object,
+  embed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: -100;
+    width: auto;
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-size: cover;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+// Серый фильтр
+%grayfilter {
+  filter: grayscale(1);
+  transition: all 0.3s ease 0s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+}
+
+// Отменить выделение
+%noselect {
+  user-select: none;
+}
+
+// Зеркальное отображение
+%mirror {
+  transform: scale(-1, 1);
+}
+
+// Плавный скролл
+%smoothscroll {
+  -webkit-overflow-scrolling: touch;
+}
+
+// Скрыть скролл
+%hidescroll {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

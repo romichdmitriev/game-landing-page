@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "src",
+    "paths": {
+      "@pages/*": ["./pages/*"],
+      "@icons/*": ["./assets/icons/*"],
+      "@images/*": ["./assets/images/*"],
+      "@js/*": ["./js/*"],
+      "@components/*": ["./components/*"],
+      "@styles/*": ["./styles/*"]
+    }
+  },
+  "include": ["**/*"],
+  "exclude": ["node_modules"]
+}
