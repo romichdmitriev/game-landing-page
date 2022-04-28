@@ -1,0 +1,132 @@
+.features {
+  @include sectionWithBackground('../assets/img/game-features-bg.jpg');
+
+  position: relative;
+  z-index: 1;
+  min-height: rem(960);
+  padding-top: rem(259);
+
+  @media screen and (max-width: $sm) {
+    min-height: rem(515);
+    padding-top: rem(82);
+  }
+
+  // .about__info
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-right: 115px;
+    margin-left: auto;
+    color: $white;
+
+    @media screen and (max-width: $sm) {
+      max-width: 203px;
+    }
+
+    @media screen and (max-width: $md) {
+      margin-right: 0;
+    }
+  }
+}
+
+.features-info {
+  &__primaryTitle {
+    margin-bottom: 65px;
+    letter-spacing: 3px;
+
+    @media screen and (max-width: $sm) {
+      margin-bottom: rem(33);
+    }
+  }
+
+  // .info__subTitle
+  &__subTitle {
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+  }
+}
+
+.accordion {
+  // .accordion__item
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 36px;
+    cursor: pointer;
+
+    &::after {
+      position: absolute;
+      top: 14px;
+      left: 6px;
+      width: 2px;
+      height: 0;
+      content: ' ';
+      background-color: $white;
+      transition: height 0.3s;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+
+  &__item_active {
+    margin-bottom: 0;
+    cursor: inherit;
+
+    &::after {
+      height: calc(100% - 7px);
+
+      @media screen and (max-width: $md) {
+        height: calc(100% - 4px);
+      }
+    }
+  }
+  // .accordion__header
+  &__header {
+    display: flex;
+    gap: 33px;
+    align-items: center;
+  }
+  // .accordion__item-title
+  &__title {
+    @extend .typography-h2;
+
+    margin-bottom: 8px;
+    color: $orange-100;
+  }
+  // .accordion__item-sign
+  &__item-sign {
+    position: relative;
+    top: -8px;
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+    border: 1.30637px solid $white;
+    border-radius: 50%;
+  }
+
+  &__item-sign_active {
+    background-color: $white;
+  }
+
+  // .accordion__item-text
+  &__content {
+    max-width: rem(365);
+    height: 0;
+    min-height: 0;
+    padding-left: 47px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  &__content_open {
+    height: auto;
+    margin-bottom: 30px;
+    transform: scaleY(1);
+  }
+}
