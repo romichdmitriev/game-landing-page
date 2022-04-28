@@ -1,0 +1,55 @@
+header.header
+  //- LOGO
+  .header__wrapper.centered-container
+    a(href='/', title='Logo')
+      img.header__logo(src='../../assets/img/logo.png', alt='', width='55', height='55')
+
+    //- NAV
+    nav.header__nav.nav
+      button#nav-link.nav__item.typography-navigation(type='button', data-href='#main') Main
+      button#nav-link.nav__item.typography-navigation(type='button', data-href='#about') About
+      button#nav-link.nav__item.typography-navigation(type='button', data-href='#features') Game Features
+      button#nav-link.nav__item.typography-navigation(type='button', data-href='#system-req') System Requirements
+      button#nav-link.nav__item.typography-navigation(type='button', data-href='#quotes') Quotes
+
+    //- HEADER SETTINGS
+    .header__settings.settings
+      .langSelector(role='button', aria-label='Выбор языка', tabindex='0')
+        span.langSelector__language ENG
+        svg(width='10', height='6')
+          use(href='#arrow')
+
+        ul.langSelector__menu(hidden)
+          li.typography-navigation.langSelector__menuItem(role='button', aria-label='RUS', data-lang='RUS') RUS
+          li.typography-navigation.langSelector__menuItem(role='button', aria-label='FRA', data-lang='FRA') FRA
+          li.typography-navigation.langSelector__menuItem(role='button', aria-label='DEU', data-lang='DEU') DEU
+
+      .settings__line 
+      a.settings__link(
+        href='https://store.steampowered.com/app/619080/SOS/',
+        target='_blank',
+        rel='noreferrer',
+        title='Official game website'
+      )
+        img(src='../../assets/icons/xbox-icon.svg', width='31', height='31', alt='steam-icon')
+
+      a.settings__link(
+        href='https://store.steampowered.com/app/619080/SOS/',
+        target='_blank',
+        rel='noreferrer',
+        title='Official game website'
+      )
+        img(src='../../assets/icons/steam-icon.svg', width='31', height='31', alt='steam-icon')
+
+      .header__burger.burger-icon
+        span.burger-icon__line
+        span.burger-icon__line
+        span.burger-icon__line
+
+    // - Menu List Burger
+    nav.header__burger-menu.burger-menu
+      button#nav-link.nav__item.typography-navigation(type='button', data-href='#main') Main
+      button#nav-link.nav__item.typography-navigation(type='button', data-href='#about') About
+      button#nav-link.nav__item.typography-navigation(type='button', data-href='#features') Game Features
+      button#nav-link.nav__item.typography-navigation(type='button', data-href='#system-req') System Requirements
+      button#nav-link.nav__item.typography-navigation(type='button', data-href='#quotes') Quotes
