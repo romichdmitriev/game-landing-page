@@ -1,0 +1,123 @@
+// swiper-variables
+$card-width: 503px;
+
+.gallery {
+  position: relative;
+  left: 50%;
+  width: 613px;
+  height: 611px;
+  overflow: hidden;
+  transform: translateX(-50%);
+
+  @media screen and (max-width: $sm) {
+    width: 266px;
+    height: 273px;
+    margin: 0 auto;
+  }
+
+  // pagination
+  &__pagination {
+    position: relative;
+    bottom: 18px;
+    max-width: 503px;
+
+    @media screen and (max-width: $sm) {
+      bottom: 12px;
+      max-width: 135px;
+      margin: 0 auto;
+    }
+  }
+
+  &__pagination-bullet {
+    width: 14px;
+    height: 14px;
+    margin-right: 52px !important;
+    background: transparent;
+    border: 1px solid $white;
+    opacity: 1;
+
+    @media screen and (max-width: $sm) {
+      width: 10px;
+      height: 10px;
+      margin-right: 14px !important;
+    }
+  }
+
+  // navigation
+  &__buttons {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: flex;
+    color: $white;
+  }
+
+  &__buttons-next {
+    cursor: pointer;
+    transform: rotate(-90deg);
+  }
+
+  &__buttons-prev {
+    cursor: pointer;
+    transform: rotate(90deg);
+  }
+}
+
+.swiper {
+  width: 503px;
+  height: 611px;
+  margin: 0;
+
+  @media screen and (max-width: $sm) {
+    width: 225px;
+    height: 273px;
+  }
+}
+
+.swiper-slide {
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+
+  /* Center slide text vertically */
+  overflow: hidden;
+  font-size: 18px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// navigation
+.swiper-button-disabled {
+  pointer-events: none;
+  opacity: 0;
+}
+
+// Pagination
+.swiper-pagination-bullet-active {
+  position: relative;
+  background: $white;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 32px;
+    height: 1px;
+    content: ' ';
+    background: $white;
+
+    @media screen and (max-width: $sm) {
+      width: 14px;
+    }
+  }
+}
