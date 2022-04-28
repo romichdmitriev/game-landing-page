@@ -96,7 +96,7 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        use: ['svg-sprite-loader', 'svgo-loader'],
+        use: [{ loader: 'svg-sprite-loader' }],
       },
       {
         test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,

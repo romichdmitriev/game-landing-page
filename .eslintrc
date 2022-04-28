@@ -1,13 +1,15 @@
 {
-  "extends": ["airbnb/base", "prettier"],
-  "plugins": ["prettier"],
+  "extends": ["airbnb/base", "eslint:recommended", "prettier", "plugin:lit-a11y/recommended"],
+  "plugins": ["prettier", "lit-a11y"],
   "parser": "babel-eslint",
   "globals": {
     "fetch": true,
     "window": true,
-    "document": true
+    "document": true,
+    "node": true
   },
   "rules": {
+    "lit-a11y/rule-name": 0,
     "prettier/prettier": ["error"],
     "import/no-extraneous-dependencies": 0,
     "no-console": 0,

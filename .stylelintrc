@@ -1,13 +1,12 @@
 {
-  "extends": "stylelint-config-standard",
-  "plugins": [
-    "stylelint-order"
-  ],
+  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "plugins": ["stylelint-order", "stylelint-prettier"],
   "rules": {
+    "prettier/prettier": true,
     "at-rule-no-unknown": [
       true,
       {
-        "ignoreAtRules": ["use", "custom-media", "function", "mixin", "return", "if"]
+        "ignoreAtRules": ["use", "custom-media", "function", "mixin", "return", "if", "include"]
       }
     ],
     "order/order": [
@@ -30,36 +29,16 @@
     ],
     "order/properties-order": [
       {
-        "properties": [
-          "all"
-        ]
+        "properties": ["all"]
       },
       {
-        "properties": [
-          "position",
-          "top",
-          "right",
-          "bottom",
-          "left",
-          "z-index"
-        ]
+        "properties": ["position", "top", "right", "bottom", "left", "z-index"]
       },
       {
-        "properties": [
-          "box-sizing",
-          "display"
-        ]
+        "properties": ["box-sizing", "display"]
       },
       {
-        "properties": [
-          "flex",
-          "flex-basis",
-          "flex-direction",
-          "flex-flow",
-          "flex-grow",
-          "flex-shrink",
-          "flex-wrap"
-        ]
+        "properties": ["flex", "flex-basis", "flex-direction", "flex-flow", "flex-grow", "flex-shrink", "flex-wrap"]
       },
       {
         "properties": [
@@ -84,23 +63,13 @@
         ]
       },
       {
-        "properties": [
-          "align-content",
-          "align-items",
-          "align-self"
-        ]
+        "properties": ["align-content", "align-items", "align-self"]
       },
       {
-        "properties": [
-          "justify-content",
-          "justify-items",
-          "justify-self"
-        ]
+        "properties": ["justify-content", "justify-items", "justify-self"]
       },
       {
-        "properties": [
-          "order"
-        ]
+        "properties": ["order"]
       },
       {
         "properties": [
