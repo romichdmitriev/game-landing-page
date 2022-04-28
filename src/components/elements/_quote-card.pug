@@ -1,0 +1,15 @@
+mixin quote-card({ img, fullname, role, text, date, animationClasses, dataAnimation })
+  div(class=`quotes-cards__item quotes-card ${animationClasses}`, data-animation=dataAnimation)
+    header.quotes-card__header
+      .quotes-card__ava-wrapper
+        img.quotes-card__ava(src=img, alt='quote-photo', width='62px', height='62px')
+
+      .quotes-card__user-info
+        p.quotes-card__user-fullname= fullname
+        p.quotes-card__user-role= role
+
+      svg.quotes-card__icon(width='18', height='14')
+        use(xlink:href='#twitter')
+    main.quotes-card__body
+      p.quotes-card__text= text
+      p.quotes-card__date= date

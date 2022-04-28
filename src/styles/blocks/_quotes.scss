@@ -1,0 +1,104 @@
+.quotes {
+  @include sectionWithBackground('../assets/img/quotes-bg.jpg');
+
+  position: relative;
+  z-index: 1;
+  min-height: rem(960);
+  padding-top: rem(160);
+
+  @media screen and (max-width: $sm) {
+    min-height: rem(834);
+    padding-top: rem(37);
+  }
+
+  // .about__wrapper
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    @media screen and (max-width: $sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // .about__info
+  &__info {
+    color: $white;
+  }
+}
+
+.quotes-info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 145px;
+
+  @media screen and (max-width: $sm) {
+    padding-top: 0;
+  }
+
+  // .quotes-info__text
+  &__text {
+    @extend .typography-primary;
+
+    max-width: 417px;
+    margin-bottom: 60px;
+    text-align: justify;
+
+    @media screen and (max-width: $sm) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  // .quotes-info___primaryTitle
+  &__primaryTitle {
+    @extend .typography-h1;
+
+    position: relative;
+    margin-bottom: rem(45);
+    letter-spacing: 3px;
+
+    @media screen and (max-width: $sm) {
+      margin-bottom: rem(36);
+    }
+  }
+
+  &__subTitle {
+    @extend .typography-h3;
+
+    margin-bottom: rem(8);
+    line-height: 22px;
+    letter-spacing: 2px;
+  }
+
+  &__button {
+    @extend .typography-button;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 260px;
+    max-width: fit-content;
+    min-height: 60px;
+    padding: em(16);
+    color: $black-500;
+    background: $orange-gradient;
+    border-radius: 4px;
+    transition: 0.3s;
+
+    @media (max-width: $sm) {
+      min-width: unset;
+      min-height: unset;
+      padding: em(13) em(11);
+      margin: 0 auto 30px;
+    }
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
