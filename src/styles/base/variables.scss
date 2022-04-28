@@ -1,28 +1,35 @@
 /* --- Шрифт по умолчанию --- */
 $fontFamily: 'Open Sans', sans-serif;
-$fontSize: rem(14);
+$fontSize: 18px;
 
 /* --- Палитра цветов --- */
 $white: #fff;
 $gray: #979797;
-$black-100: #1A1917;
-$black-200: #080A0B;
-$black-300: #0B0B03;
-$black-400: #0F0F0F;
-$black-500: #08090A;
-$black-600: #000000;
-$red: #FF1313;
-$orange-100: #FFB548;
-$orange-200: #F3AF34;
+$black-100: #1a1917;
+$black-200: #080a0b;
+$black-300: #0b0b03;
+$black-400: #0f0f0f;
+$black-500: #08090a;
+$black-600: #000;
+$red: #ff1313;
+$orange-100: #ffb548;
+$orange-200: #f3af34;
 
 /* --- Палитра градиентов --- */
 $orange-gradient: linear-gradient(194.68deg, $orange-100 11.27%, $orange-200 90.4%);
-$background-gradient: radial-gradient(189.96% 61.18% at 50% 38.82%, rgba(255, 181, 72, 0) 0%, rgba(52, 44, 29, 0.80319) 73.22%, #08090A 99.74%);
+$background-gradient: radial-gradient(
+  189.96% 61.18% at 50% 38.82%,
+  rgba(255, 181, 72, 0) 0%,
+  rgba(52, 44, 29, 0.80319) 73.22%,
+  #08090a 99.74%
+);
 
 /* --- Настройки --- */
 // Минимальная ширина страницы
 $minWidth: 320;
 
+// Высота хедера
+$headerHeight: #{55 + 21 * 2};
 // Ширина полотна (макета)
 $maxWidth: 1920;
 
@@ -34,18 +41,18 @@ $maxWidthContainer: 1200;
 $containerPadding: 30;
 
 // Ширина срабатывания первого брейкпоинта
-$containerWidth: $maxWidthContainer + $containerPadding;
+$containerWidth: $maxWidthContainer;
 
 // Размеры экранов
 $pc: $containerWidth;
-$tablet: 991.98;
-$mobile: 767.98;
-$mobileSmall: 479.98;
+$bigTablet: 996.98;
+$tablet: 767.98;
+$mobileSmall: 576.98;
 
 // Брейкпоинты
 $lg: $pc + px;
-$md: $tablet + px;
-$sm: $mobile + px;
+$md: $bigTablet + px;
+$sm: $tablet + px;
 $xs: $mobileSmall + px;
 
 // Тип адаптива:

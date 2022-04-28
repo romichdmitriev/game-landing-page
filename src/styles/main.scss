@@ -2,18 +2,33 @@
 @import 'base/normalize.css';
 
 /* -- Подключение переменных --- */
-@import "base/variables";
+@import 'base/variables';
 
 /* --- Подключение общих стилей --- */
 @import 'base/base';
 
 /* --- Подключение миксинов --- */
-@import "base/utils";
+@import 'base/utils';
 
 /* --- TODO Подключение шрифтов. Не подключаются через @font-face --- */
 @import 'base/fonts';
 
+/* --- Подключение файлов библиотек --- */
+@import 'animate.css';
+
 /* --- Подключение стилей отдельных блоков --- */
+@import 'blocks/header';
+@import 'blocks/main';
+@import 'blocks/about';
+@import 'blocks/features';
+@import 'blocks/system-req.scss';
+@import 'blocks/quotes.scss';
+@import 'blocks/newsletter';
+@import 'blocks/footer.scss';
+
+/* --- Подключение стилей отдельных элементов --- */
+@import 'elements/quote-card.scss';
+@import 'elements/gallery.scss';
 
 /* --- Подключение шаблонов заготовок --- */
 @import 'base/templates';

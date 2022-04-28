@@ -4,31 +4,69 @@
   font-family: 'Bebas Neue Bold';
   font-style: normal;
   font-weight: 700;
-  src: url('../assets/fonts/Bebas_Neue_Bold.ttf') format('ttf');
-  unicode-range: U+0020-007F;
+  src: url('../assets/fonts/Bebas_Neue_Bold.woff') format('woff');
 }
 
 /* --- Typography classes --- */
 .typography-h1 {
-  font: 700 80px 'Bebas Neue Bold', sans-serif;
+  font: 700 rem(80) 'Bebas Neue Bold', sans-serif;
+  line-height: 80px;
+  letter-spacing: 3px;
+
+  @media (max-width: $sm) {
+    font-size: rem(33);
+    line-height: 33px;
+  }
 }
 
 .typography-h2 {
-  font: 700 36px 'Bebas Neue Bold', sans-serif;
+  font: 700 rem(36) 'Bebas Neue Bold', sans-serif;
+  line-height: 36px;
+  letter-spacing: 2px;
+
+  @media (max-width: $sm) {
+    font-size: rem(21);
+    line-height: 21px;
+  }
 }
 
 .typography-h3 {
-  font: 700 24px 'Bebas Neue Bold', sans-serif;
+  font: 700 rem(24) 'Bebas Neue Bold', sans-serif;
+  line-height: 24px;
+  letter-spacing: 2px;
+
+  @media (max-width: $sm) {
+    font-size: rem(18);
+    line-height: 18px;
+  }
 }
 
 .typography-primary {
-  font: 400 18px $fontFamily;
+  font: 400 rem(18) $fontFamily;
+  line-height: 22px;
+
+  @media (max-width: $sm) {
+    font-size: rem(14);
+    line-height: 16px;
+  }
 }
 
 .typography-button {
-  font: 700 16px $fontFamily;
+  font: 700 rem(16) $fontFamily;
+
+  @media (max-width: $sm) {
+    font-size: rem(14);
+  }
 }
 
 .typography-navigation {
-  font: 700 12px $fontFamily;
+  font: 700 rem(12) $fontFamily;
+}
+
+.typography-regular {
+  font: 400 rem(12) $fontFamily;
+}
+
+.typography-regular-middle {
+  font: 400 rem(14) $fontFamily;
 }

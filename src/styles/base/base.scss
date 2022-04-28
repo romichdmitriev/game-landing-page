@@ -1,7 +1,61 @@
-html,
-body {
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+html,
+body {
   font: 400 $fontSize $fontFamily;
+  background-color: $black-200;
+
+  @media (max-width: $md) {
+    font: 400 rem(14) $fontFamily;
+  }
+}
+
+/* --- Сброс стилей --- */
+section {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+table {
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:visited,
+a:focus {
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+// animation on scroll
+.animated-scroll {
+  visibility: hidden;
+  opacity: 0;
+}
+
+:root {
+  --animate-delay: 0.5s;
 }

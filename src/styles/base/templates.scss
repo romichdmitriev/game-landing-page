@@ -1,3 +1,26 @@
+// Контейнер, который центрирует контент
+.centered-container {
+  max-width: rem(1200);
+  margin: 0 auto;
+
+  @media screen and (max-width: $lg) {
+    max-width: rem(996);
+  }
+
+  @media screen and (max-width: $md) {
+    max-width: rem(768);
+  }
+
+  @media screen and (max-width: $sm) {
+    max-width: rem(576);
+  }
+
+  @media screen and (max-width: $xs) {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+
 // Адаптивное видео
 %responsiveVideo {
   position: relative;
