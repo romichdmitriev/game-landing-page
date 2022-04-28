@@ -1,0 +1,31 @@
+section#system-req.system-req
+  .centered-container
+    header.system-req__header.animate__animated.animated-scroll(data-animation='animate__bounceIn')
+      h3.system-req-info__subTitle.typography-h3 Can My Computer Run this game?
+
+      h3.system-req-info__primaryTitle.typography-h1 system requirements
+
+    .table.system-req__table-wrapper.animate__animated.animate__delay-1s.animated-scroll(
+      data-animation='animate__fadeInUp'
+    )
+      table.system-req__table.req-table
+        tr.req-table__row
+          td.req-table__cell
+            p.req-table__cell-title OS:
+            p.req-table__cell-description Windows 7 64-bit only (No OSX support at this time)
+
+          td.req-table__cell
+            p.req-table__cell-title pROCESSOR:
+            p.req-table__cell-description Intel Core 2 Duo @ 2.4 GHZ or AMD Athlon X2 @ 2.8 GHZ
+        tr.req-table__row
+          td.req-table__cell
+            p.req-table__cell-title mEMORY:
+            p.req-table__cell-description 8 GB RAM
+
+          td.req-table__cell
+            p.req-table__cell-title storage:
+            p.req-table__cell-description 8 GB available space
+        tr.req-table__row
+          td.req-table__cell(colspan=2)
+            p.req-table__cell-title GRAPHICS:
+            p.req-table__cell-description NVIDIA GeForce GTX 660 2GB or AMD Radeon HD 7850 2GB DirectX11 (Shader Model 5)

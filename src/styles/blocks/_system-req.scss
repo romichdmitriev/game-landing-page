@@ -1,0 +1,92 @@
+.system-req {
+  @include sectionWithBackground('../assets/img/system-req-bg.jpg');
+
+  position: relative;
+  z-index: 1;
+  min-height: 960px;
+  padding-top: 145px;
+
+  @media screen and (max-width: $sm) {
+    min-height: rem(719);
+    padding-top: rem(68);
+  }
+
+  // .about__info
+  &__header {
+    margin-bottom: 140px;
+    color: $white;
+    text-align: center;
+
+    @media screen and (max-width: $sm) {
+      margin-bottom: 46px;
+    }
+  }
+
+  &__table__wrapper {
+    position: relative;
+  }
+}
+
+.req-table {
+  position: relative;
+  max-width: 573px;
+  border-spacing: 0;
+  background-size: contain;
+
+  @media screen and (max-width: $md) {
+    max-width: 100%;
+    background-size: 100% 100%;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 67px;
+    width: 83px;
+    height: 10px;
+    content: ' ';
+    background: rgba(255, 255, 255, 0.1);
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+
+    @media screen and (max-width: $sm) {
+      width: 53px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 67px;
+    z-index: 10;
+    width: 83px;
+    height: 10px;
+    content: ' ';
+    background: #080a0b;
+    clip-path: polygon(11% 10%, 88% 10%, 99% 100%, 1% 100%);
+
+    @media screen and (max-width: $sm) {
+      width: 53px;
+    }
+  }
+
+  // .req-table__cell
+  &__cell {
+    @extend .typography-primary;
+
+    padding: em(12) em(18) em(31);
+    color: $white;
+    vertical-align: top;
+    border: 0.15px solid rgba(255, 255, 255, 0.1);
+
+    @media screen and (max-width: $sm) {
+      padding: em(10) em(10) em(19);
+    }
+  }
+  // .req-table__cell-title
+  &__cell-title {
+    @extend .typography-h3;
+
+    margin-bottom: 11px;
+    color: $orange-100;
+  }
+}
