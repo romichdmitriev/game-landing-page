@@ -1,0 +1,21 @@
+section#main.main
+  .centered-container
+    .main__cta.cta.animate__animated(data-animation='animate__fadeInUp')
+      h1.cta__primaryTitle.typography-h1 SURVIVE AT ALL COSTS
+
+      h3.cta__subTitle.typography-h3 EXPERIENCE NEW SOCIAL BATTLE ROYALE GAME
+
+      a.cta__button.typography-button(
+        title='buy on steam',
+        href='https://store.steampowered.com/app/619080/SOS/',
+        target='_blank',
+        noreferrer='noopener'
+      )
+        span.cta__buttonText Buy now on Steam
+        span.cta__buttonLine
+        span.cta__buttonCost $14.99
+
+    button.main__scrolldown.scrolldown(type='button', data-href='#about')
+      span.scrolldown__text.typography-navigation The Story
+      svg(width='23', height='12')
+        use(xlink:href='#scroll-down')
