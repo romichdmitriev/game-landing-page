@@ -1,0 +1,16 @@
+section#newsletter.newsletter
+  .centered-container.newsletter__wrapper
+    .newsletter__info.newsletter-info
+      .animate__animated.animated-scroll(data-animation='animate__tada')
+        h3.newsletter-info__subTitle Want to stay in touch?
+
+        h3.newsletter-info__primaryTitle newsletter SUBSCRIBE
+
+      p.newsletter-info__text In order to start receiving our news, all you have to do is enter your email address. Everything else will be taken care of by us. We will send you emails containing information about game. We don’t spam.
+
+      form.newsletter__subscribe-form.subscribe-form
+        .subscribe-form__input-wrapper
+          input#email-input.subscribe-form__input(type='email', placeholder='&nbsp;')
+          label.subscribe-form__input-label(for='email-input', name='email-input') Your email address
+
+        button.newsletter-info__button.typography-button(type='button') Subscribe now

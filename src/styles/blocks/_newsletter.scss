@@ -1,0 +1,158 @@
+.newsletter {
+  @include sectionWithBackground('../assets/img/newsletter-bg.jpg');
+
+  position: relative;
+  z-index: 1;
+  min-height: rem(744);
+  padding-top: rem(220);
+
+  @media (max-width: $sm) {
+    min-height: rem(523);
+    padding-top: rem(64);
+  }
+
+  // .newsletter__info
+  &__info {
+    margin-left: auto;
+    color: $white;
+  }
+
+  // .newsletter__subscribe
+  &__subscribe-form {
+  }
+}
+
+.newsletter-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 655px;
+
+  // .newsletter-info__text
+  &__text {
+    @extend .typography-primary;
+
+    margin-bottom: 64px;
+    text-align: justify;
+
+    @media (max-width: $sm) {
+      margin-bottom: rem(47);
+      margin-left: rem(110);
+    }
+  }
+
+  // .newsletter-info___primaryTitle
+  &__primaryTitle {
+    @extend .typography-h1;
+
+    position: relative;
+    margin-bottom: rem(50);
+    letter-spacing: 3px;
+
+    @media (max-width: $sm) {
+      margin-bottom: rem(27);
+      margin-left: rem(110);
+    }
+  }
+
+  &__subTitle {
+    @extend .typography-h3;
+
+    margin-bottom: rem(8);
+    line-height: 22px;
+    letter-spacing: 2px;
+
+    @media (max-width: $sm) {
+      margin-left: rem(110);
+    }
+  }
+
+  &__button {
+    @extend .typography-button;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 260px;
+    max-width: fit-content;
+    min-height: 44px;
+    padding: em(16);
+    color: $black-500;
+    background: $orange-gradient;
+    border-radius: 4px;
+    transition: 0.3s;
+
+    @media (max-width: $md) {
+      width: 100%;
+      max-width: 100%;
+      padding: em(13) em(11);
+    }
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 17px;
+  flex-wrap: wrap;
+
+  &__input-wrapper {
+    position: relative;
+
+    @media (max-width: $md) {
+      min-width: 100%;
+    }
+  }
+
+  &__input {
+    min-width: 367px;
+    height: 60px;
+    padding: 27px 21px 12px;
+    color: $orange-100;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s;
+
+    @media (max-width: $md) {
+      min-width: 100%;
+      height: 44px;
+    }
+
+    &:focus + label,
+    &:not(:placeholder-shown) + label {
+      @extend .typography-regular-middle;
+
+      transform: translateY(-22px);
+    }
+
+    &:focus {
+      outline: 1px solid $orange-100;
+      box-shadow: inset 0 0 0.5px 0.5px $orange-100;
+    }
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  &__input-label {
+    @extend .typography-primary;
+
+    position: absolute;
+    top: 50%;
+    left: 21px;
+    color: $white;
+    opacity: 0.5;
+    transition: 0.2s ease-out;
+    transform: translateY(-50%);
+    transform-origin: 0% 100%;
+  }
+}
