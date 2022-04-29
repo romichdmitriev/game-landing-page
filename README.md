@@ -1,4 +1,6 @@
 # Game Landing Page
+![image](https://user-images.githubusercontent.com/64164474/165939183-ad91fe11-5b3d-4051-bf9f-5baab7807bc5.png)
+
 
 ## Technologies
 - [Webpack 5 Boilerplate](https://github.com/romichdmitriev/webpack-markup-boilerplate)
