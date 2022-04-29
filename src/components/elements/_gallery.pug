@@ -1,12 +1,12 @@
-.gallery.animate__animated.animate__delay-2s.animate__slow.animated-scroll(data-animation='animate__fadeIn')
+.gallery.animate__animated.animate__slow.animated-scroll.animate__slower(data-animation='animate__fadeIn')
   .swiper.mySwiper
     .swiper-wrapper
       .swiper-slide
-        img(src='../../assets/img/about-gallery-1.jpg', alt='slider photo')
+        img(src=require('@images/about-gallery-1.jpg'), alt='slider photo')
       .swiper-slide
-        img(src='../../assets/img/about-gallery-2.jpg', alt='slider photo')
+        img(src=require('@images/about-gallery-2.jpg'), alt='slider photo')
       .swiper-slide
-        img(src='../../assets/img/about-gallery-3.jpg', alt='slider photo')
+        img(src=require('@images/about-gallery-3.jpg'), alt='slider photo')
 
   <!-- If we need pagination -->
   .gallery__pagination
@@ -15,8 +15,7 @@
   <!-- If we need navigation buttons -->
   .gallery__buttons
     .gallery__buttons-prev
-      svg(width='34', height='14')
-        use(xlink:href='#next-el-arrow')
+      include /assets/icons/next-el-arrow.svg
+
     .gallery__buttons-next
-      svg(width='34', height='14')
-        use(xlink:href='#next-el-arrow')
+      include /assets/icons/next-el-arrow.svg

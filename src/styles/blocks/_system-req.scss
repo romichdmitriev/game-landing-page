@@ -1,5 +1,5 @@
 .system-req {
-  @include sectionWithBackground('../assets/img/system-req-bg.jpg');
+  @include sectionWithBackground('../assets/img/system-req-bg.jpg?as=webp');
 
   position: relative;
   z-index: 1;

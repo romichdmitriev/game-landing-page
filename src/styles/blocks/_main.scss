@@ -1,5 +1,5 @@
 .main {
-  @include sectionWithBackground('../assets/img/main-block-bg.jpg');
+  @include sectionWithBackground('@images/main-block-bg.jpg?as=webp');
 
   position: relative;
   z-index: 1;

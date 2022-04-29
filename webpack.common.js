@@ -3,7 +3,6 @@ const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 const CSSExtractor = new MiniCssExtractPlugin({
   filename: 'styles/[name].css',
@@ -35,13 +34,13 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[hash:8].js',
     chunkFilename: '[id].[hash:8].js',
+    assetModuleFilename: 'assets/[name][ext]',
   },
   resolve: {
-    extensions: ['.js', '.pug'],
     alias: {
       '@pages': path.resolve(__dirname, 'src/pages/'),
       '@icons': path.resolve(__dirname, 'src/assets/icons/'),
-      '@images': path.resolve(__dirname, 'src/assets/images/'),
+      '@images': path.resolve(__dirname, 'src/assets/img/'),
       '@utils': path.resolve(__dirname, 'src/js/utils/'),
       '@components': path.resolve(__dirname, 'src/components/'),
       '@styles': path.resolve(__dirname, 'src/styles/'),
@@ -62,14 +61,19 @@ module.exports = {
         use: 'babel-loader',
       },
       {
+        test: /\.(html)$/,
+        use: ['html-loader'],
+      },
+      {
         test: /\.pug$/,
-        use: {
-          loader: 'pug-loader',
-          options: {
-            pretty: true,
-            self: true,
+        use: [
+          {
+            loader: 'simple-pug-loader',
+            options: {
+              root: path.resolve(__dirname, 'src'),
+            },
           },
-        },
+        ],
       },
       {
         test: /\.(css|scss)$/,
@@ -78,6 +82,15 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
             options: {
               publicPath: (resourcePath, context) => `${path.relative(path.dirname(resourcePath), context)}/`,
+            },
+          },
+          {
+            loader: 'string-replace-loader',
+            options: {
+              multiple: [
+                { search: '@images', replace: '../assets/img' },
+                { search: '@icons', replace: '../assets/icons' },
+              ],
             },
           },
           {
@@ -95,28 +108,23 @@ module.exports = {
         ],
       },
       {
-        test: /\.svg$/,
-        use: [{ loader: 'svg-sprite-loader' }],
-      },
-      {
         test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-        type: 'asset',
+        type: 'asset/resource',
         generator: {
           filename: '[path][name]-[hash][ext]',
         },
       },
       {
-        test: /\.(gif|png|jpe?g)$/i,
-        type: 'asset',
+        test: /\.(png|jpg|jpeg|gif|svg)$/i,
+        type: 'asset/resource',
         generator: {
-          filename: '[path][name]-[hash][ext]',
+          filename: '[path][name].[hash:8][ext]',
         },
       },
     ],
   },
   plugins: [
     CSSExtractor,
-    new SpriteLoaderPlugin(),
     new CopyWebpackPlugin({
       patterns: [
         {

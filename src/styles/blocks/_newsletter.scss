@@ -1,5 +1,5 @@
 .newsletter {
-  @include sectionWithBackground('../assets/img/newsletter-bg.jpg');
+  @include sectionWithBackground('../assets/img/newsletter-bg.jpg?as=webp');
 
   position: relative;
   z-index: 1;

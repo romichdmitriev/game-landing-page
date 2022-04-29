@@ -1,5 +1,5 @@
 .features {
-  @include sectionWithBackground('../assets/img/game-features-bg.jpg');
+  @include sectionWithBackground('../assets/img/game-features-bg.jpg?as=webp');
 
   position: relative;
   z-index: 1;

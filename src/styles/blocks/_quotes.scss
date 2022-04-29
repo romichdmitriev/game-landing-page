@@ -1,5 +1,5 @@
 .quotes {
-  @include sectionWithBackground('../assets/img/quotes-bg.jpg');
+  @include sectionWithBackground('@images/quotes-bg.jpg?as=webp');
 
   position: relative;
   z-index: 1;

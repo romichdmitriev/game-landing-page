@@ -2,7 +2,7 @@ header.header
   //- LOGO
   .header__wrapper.centered-container
     a(href='/', title='Logo')
-      img.header__logo(src='../../assets/img/logo.png', alt='', width='55', height='55')
+      img.header__logo(src=require('@images/logo.png'), alt='', width='55', height='55')
 
     //- NAV
     nav.header__nav.nav
@@ -16,8 +16,7 @@ header.header
     .header__settings.settings
       .langSelector(role='button', aria-label='Выбор языка', tabindex='0')
         span.langSelector__language ENG
-        svg(width='10', height='6')
-          use(href='#arrow')
+        include /assets/icons/arrow.svg
 
         ul.langSelector__menu(hidden)
           li.typography-navigation.langSelector__menuItem(role='button', aria-label='RUS', data-lang='RUS') RUS
@@ -31,7 +30,7 @@ header.header
         rel='noreferrer',
         title='Official game website'
       )
-        img(src='../../assets/icons/xbox-icon.svg', width='31', height='31', alt='steam-icon')
+        img(src=require('@icons/xbox-icon.svg'), width='31', height='31', alt='steam-icon')
 
       a.settings__link(
         href='https://store.steampowered.com/app/619080/SOS/',
@@ -39,7 +38,7 @@ header.header
         rel='noreferrer',
         title='Official game website'
       )
-        img(src='../../assets/icons/steam-icon.svg', width='31', height='31', alt='steam-icon')
+        img(src=require('@icons/steam-icon.svg'), width='31', height='31', alt='steam-icon')
 
       .header__burger.burger-icon
         span.burger-icon__line

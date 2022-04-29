@@ -8,8 +8,9 @@ mixin quote-card({ img, fullname, role, text, date, animationClasses, dataAnimat
         p.quotes-card__user-fullname= fullname
         p.quotes-card__user-role= role
 
-      svg.quotes-card__icon(width='18', height='14')
-        use(xlink:href='#twitter')
+      span.quotes-card__icon
+        include /assets/icons/twitter.svg
+
     main.quotes-card__body
       p.quotes-card__text= text
       p.quotes-card__date= date

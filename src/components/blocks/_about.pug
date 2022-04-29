@@ -1,13 +1,12 @@
 section#about.about
   .centered-container.about__wrapper
-    .about__info.info.animate__animated.animated-scroll(data-animation='animate__fadeInLeft')
+    .about__info.info.animate__animated.animated-scroll.animate__delay-2s.animate__slow(
+      data-animation='animate__fadeInLeft'
+    )
       h3.info__subTitle.typography-h3 What is SOS?
 
       h3.info__primaryTitle.typography-h1 social battle royale game
 
       p.info__text.typography-primary Each round, you and 15 other contestants compete to escape a deadly island filled with monsters. The trick is: three people can survive. Will you run solo or form friendships with others to escape? <br><br> Making the right decisions could be the difference between life and death.
 
-    include ../elements/_gallery.pug
-    //- button.slider__next(type='button')
-    //-   svg(width='23', height='12')
-    //-     use(xlink:href='#scroll-down')
+    include /components/elements/_gallery.pug
