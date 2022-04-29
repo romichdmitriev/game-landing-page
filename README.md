@@ -1,42 +1,23 @@
-# 🚀 Html webpack boilerplate
+# Game Landing Page
 
-## ⚙️ Features
-- Webpack 5
+## Technologies
+- [Webpack 5 Boilerplate](https://github.com/romichdmitriev/webpack-markup-boilerplate)
 - Pug
-- Babel
-- PostCSS
-- ESlint
-- Stylelint
-- Prettier
-- devServer
-- Github Actions
+- SCSS
+- Swiper.js
+- Animate.css
+
+## Deploy
+[Game Landing Page](http://romichdmitriev-game-landing-page.netlify.com)
 
 ## 🏁 Quick start
 
 ``` bash
 # Download repository:
-git clone https://github.com/romichdmitriev/webpack-markup-boilerplate
+git clone https://github.com/romichdmitriev/game-landing-page
 
 # Go to the app:
-cd webpack-markup-boilerplate
-
-# Install dependencies:
-npm install
-# or
-yarn
-
-# Server with live reload at http://localhost:8000/
-npm run start
-# or
-yarn run start
-```
-
-## 🏁 Production build
-``` bash
-# Output will be at dist/ folder
-npm run build
-# or
-yarn run build
+cd game-landing-page
 ```
 
 | npm              | yarn                | actions               |
@@ -44,4 +25,3 @@ yarn run build
 | `npm install`    | `yarn`              | install dependencies  |
 | `npm run start`  | `yarn run start`    | development mode      |
 | `npm run build`  | `yarn run build`    | production mode          |
-| `npm run lint:fix` | `yarn run lint:fix` | fix file with linters |
