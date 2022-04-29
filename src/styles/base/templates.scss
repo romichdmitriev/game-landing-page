@@ -1,23 +1,23 @@
 // Контейнер, который центрирует контент
 .centered-container {
-  max-width: rem(1200);
+  max-width: rem(1200 + 30);
+  padding: 0 15px;
   margin: 0 auto;
 
   @media screen and (max-width: $lg) {
-    max-width: rem(996);
+    max-width: rem(996 + 30);
   }
 
   @media screen and (max-width: $md) {
-    max-width: rem(768);
+    max-width: rem(768 + 30);
   }
 
   @media screen and (max-width: $sm) {
-    max-width: rem(576);
+    max-width: rem(576 + 30);
   }
 
   @media screen and (max-width: $xs) {
     max-width: 100%;
-    padding: 0 15px;
   }
 }
 

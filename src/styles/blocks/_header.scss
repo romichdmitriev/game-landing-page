@@ -63,7 +63,7 @@
   display: flex;
   gap: 46px;
 
-  @media screen and (max-width: $md) {
+  @media screen and (max-width: $sm) {
     display: none;
   }
   // .nav__item
@@ -75,6 +75,10 @@
     letter-spacing: 0.1em;
     transition: color 0.3s;
 
+    @media screen and (max-width: $md) {
+      text-align: center !important;
+    }
+
     &:hover {
       color: $orange-100;
     }
@@ -85,6 +89,9 @@
   display: flex;
   gap: 24px;
   align-items: center;
+  @media screen and (max-width: $md) {
+    gap: 12px;
+  }
   // .settings__line
   &__line {
     align-self: stretch;
